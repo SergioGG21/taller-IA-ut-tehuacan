@@ -3,7 +3,8 @@ const assert = require("node:assert/strict");
 const {
   formatLocalDate,
   addDaysLocal,
-  calculateCurrentStreak
+  calculateCurrentStreak,
+  sortSessionsNewestFirst
 } = require("../app.js");
 
 describe("Lógica de fechas y racha del Diario de Estudio", () => {
@@ -41,5 +42,18 @@ describe("Lógica de fechas y racha del Diario de Estudio", () => {
       { date: "2026-11-25", topic: "Mañana", minutes: 60 }
     ];
     assert.equal(calculateCurrentStreak(sessions, "2026-11-24"), 1);
+  });
+
+  it("ordena de más reciente a más antigua sin romperse con registros corruptos", () => {
+    const sessions = [
+      { date: "2026-11-20", topic: "A", minutes: 10 },
+      null,
+      { topic: "Sin fecha", minutes: 5 },
+      { date: 20261121, topic: "Número", minutes: 5 },
+      { date: "2026-02-30", topic: "Inválida", minutes: 5 },
+      { date: "2026-11-24", topic: "B", minutes: 20 }
+    ];
+    const sorted = sortSessionsNewestFirst(sessions);
+    assert.deepEqual(sorted.map((s) => s.topic), ["B", "A"]);
   });
 });

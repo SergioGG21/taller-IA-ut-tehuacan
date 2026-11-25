@@ -1,5 +1,6 @@
 # AGENTS.md Diario de Estudio
-Web estática para registrar sesiones de estudio y motivarse viendo la racha de días seguidos. Proyecto didáctico: el código debe poder entenderlo alguien que empieza a programar.
+Web estática para registrar sesiones de estudio y motivarse viendo la racha de días seguidos.
+Proyecto didáctico: nivel principiante
 
 ## Stack y estructura
 - HTML, CSS y JavaScript puros: sin frameworks, librerías, npm, bundler ni build.
@@ -33,4 +34,4 @@ Web estática para registrar sesiones de estudio y motivarse viendo la racha de 
 ## Comandos y Verificación
 - Tests: `node --test`
 - Lee `docs/constitution.md` y la spec activa (`specs/NNN-*/`) antes de tocar código.
-- Después de cada cambio, verifica la funcionalidad, revisa la consola y comprueba la vista móvil.
+- Después de cada cambio, verifica la funcionalidad, revisa la consola y comprueba la vista móvil (usa el MCP `chrome-devtools`).

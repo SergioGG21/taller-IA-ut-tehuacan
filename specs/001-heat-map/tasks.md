@@ -1,4 +1,5 @@
 # Tareas — Spec 001 Mapa de Calor de Estudio
+Estado: bloqueado (depende de la aclaración de niveles de intensidad en `spec.md`).
 
 - [ ] **T1. Función pura `buildHeatMapDays` con pruebas en `node --test`.** RF-1, RF-2, RF-3, RF-4
   Hecho cuando: existen pruebas en `tests/` y `node --test` pasa en verde.

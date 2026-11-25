@@ -1,4 +1,5 @@
 # Plan — Spec 001 Mapa de Calor de Estudio
+Estado: bloqueado. No se implementa hasta resolver el [NECESITA ACLARACIÓN] de `spec.md` y aprobar la spec.
 
 ## Archivos y responsabilidades
 - `app.js`: agregar función pura para construir los datos del mapa de calor y función de renderizado en `index.html`.

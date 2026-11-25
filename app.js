@@ -70,14 +70,12 @@
     return streak;
   }
 
+  // Ignora registros corruptos (sin fecha válida) para que la lista nunca se rompa.
   function sortSessionsNewestFirst(sessions) {
     if (!Array.isArray(sessions)) return [];
-    return [...sessions].sort((a, b) => {
-      if (a.date !== b.date) {
-        return b.date.localeCompare(a.date);
-      }
-      return 0;
-    });
+    return sessions
+      .filter((s) => s && parseLocalDate(s.date))
+      .sort((a, b) => b.date.localeCompare(a.date));
   }
 
   const logicApi = {

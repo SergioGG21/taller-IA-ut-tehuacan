@@ -1,11 +1,12 @@
 :root {
-  --bg: #f4f5f7;
-  --surface: #ffffff;
-  --text: #1f2933;
-  --muted: #52606d;
-  --accent: #0f766e;
-  --accent-hover: #115e59;
-  --border: #d9e2ec;
+  --bg: #f1f0ea;
+  --surface: #fbfaf6;
+  --text: #2b2d22;
+  --muted: #63624f;
+  --accent: #556b2f;
+  --accent-hover: #3f5022;
+  --border: #dcd9cb;
+  --on-accent: #ffffff;
 }
 
 * {
@@ -40,7 +41,7 @@ body {
 
 .streak-card {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--on-accent);
   border-radius: 12px;
   padding: 1.25rem;
   display: flex;
@@ -86,11 +87,19 @@ input {
   border: 1px solid var(--border);
   border-radius: 8px;
   font-size: 1rem;
+  background: #ffffff;
+  color: var(--text);
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
 }
 
 .btn-primary {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--on-accent);
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1rem;
