@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diario de Estudio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Diario de Estudio</h1>
+      <p class="subtitle">Registra tus sesiones y mantén tu racha activa</p>
+    </header>
+
+    <section class="streak-card" aria-label="Racha actual">
+      <span class="streak-label">Racha actual</span>
+      <div id="current-streak" class="streak-value">0 días</div>
+    </section>
+
+    <section class="card">
+      <h2>Nueva sesión</h2>
+      <form id="session-form" class="form">
+        <div class="field">
+          <label for="session-date">Fecha</label>
+          <input type="date" id="session-date" name="date" required />
+        </div>
+
+        <div class="field">
+          <label for="session-topic">Tema</label>
+          <input type="text" id="session-topic" name="topic" placeholder="Ej. Redes, agentes, SDD..." required />
+        </div>
+
+        <div class="field">
+          <label for="session-minutes">Minutos</label>
+          <input type="number" id="session-minutes" name="minutes" min="1" placeholder="30" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Guardar sesión</button>
+      </form>
+      <p id="form-message" class="message" role="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Sesiones registradas</h2>
+      <ul id="sessions-list" class="sessions-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
