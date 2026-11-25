@@ -10,6 +10,7 @@ Base v1 lista para el taller: registrar sesiones (fecha, tema, minutos), racha a
 - Fechas en hora local (`AAAA-MM-DD`): evita desplazamientos por UTC.
 - La lista ignora registros sin fecha válida: un dato corrupto en `localStorage` no rompe la vista.
 - MCP `chrome-devtools` en `opencode.json` (V2): herramienta del agente, no dependencia del proyecto.
+- Soporte doble: OpenCode (`.opencode/`, `.agents/`) y Claude Code (`.claude/`, `CLAUDE.md`, `.mcp.json`). `AGENTS.md` es la única fuente de reglas.
 - Plan y tareas de `001-heat-map` quedan bloqueados a propósito hasta resolver la aclaración.
 
 ## Aprendizajes y errores a evitar
